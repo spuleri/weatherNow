@@ -97,6 +97,7 @@
     if (self.currentConditions) {
         NSLog(@"%@", self.currentConditions);
         // set stuff on view
+        self.currentLocation.text = self.currentConditions.locationName;
         [self setIcon];
         [self setBackgroundColor];
         [self setTemperature];

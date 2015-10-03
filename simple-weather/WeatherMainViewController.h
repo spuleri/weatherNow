@@ -19,5 +19,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *currentTemp;
 @property (strong, nonatomic) IBOutlet UILabel *currentIcon;
 @property (strong, nonatomic) IBOutlet UILabel *currentWeatherText;
+@property (strong, nonatomic) IBOutlet UILabel *currentLocation;
 @property (strong, nonatomic) UIColor   *currentBackgroundColor;
 @end

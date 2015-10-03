@@ -22,21 +22,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="t7L-Nc-tqh">
-                                <rect key="frame" x="219" y="102" width="162" height="295"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="t7L-Nc-tqh">
+                                <rect key="frame" x="219" y="102" width="162" height="298"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Shc-wf-pRi">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Shc-wf-pRi">
                                         <rect key="frame" x="43" y="0.0" width="77" height="108"/>
                                         <fontDescription key="fontDescription" name="artillcleanweathericons-Regular" family="artill clean weather icons" pointSize="90"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="96" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hH-I0-DWe">
-                                        <rect key="frame" x="0.0" y="108" width="162" height="169"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="96" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hH-I0-DWe">
+                                        <rect key="frame" x="0.0" y="108" width="162" height="172"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="190" id="YYI-Uz-lvC"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="145"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="145"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="default">
@@ -45,12 +45,12 @@
                                             </mask>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="It's hot as hell outside..." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4FM-34-VaM">
-                                        <rect key="frame" x="1" y="277" width="160" height="18"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It's hot as hell outside..." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4FM-34-VaM">
+                                        <rect key="frame" x="4" y="280" width="153" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="180" id="wb0-gi-9zd"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="default">
@@ -61,9 +61,17 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="location" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ey-Yc-ars">
+                                <rect key="frame" x="279" y="34" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="11"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.44822189229521026" blue="0.39328612552056585" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="1ey-Yc-ars" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="14" id="0Em-KM-NWj"/>
+                            <constraint firstItem="t7L-Nc-tqh" firstAttribute="top" secondItem="1ey-Yc-ars" secondAttribute="bottom" constant="47" id="3Oq-DL-cVn"/>
                             <constraint firstAttribute="trailingMargin" secondItem="t7L-Nc-tqh" secondAttribute="trailing" constant="210" id="Grj-Nh-kUv"/>
                             <constraint firstItem="t7L-Nc-tqh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="191" id="MK1-PT-pDd"/>
                             <constraint firstItem="t7L-Nc-tqh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="37" id="WM0-Wk-hM9"/>
@@ -73,6 +81,7 @@
                             <constraint firstItem="t7L-Nc-tqh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="191" id="bg7-Ra-DAc"/>
                             <constraint firstItem="t7L-Nc-tqh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="145" id="cnJ-gx-Bsa"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="t7L-Nc-tqh" secondAttribute="bottom" constant="231" id="g1W-t3-zGS"/>
+                            <constraint firstItem="1ey-Yc-ars" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gKU-So-Q4G"/>
                             <constraint firstItem="t7L-Nc-tqh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="172" id="jyU-pJ-Y5f"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="t7L-Nc-tqh" secondAttribute="bottom" constant="339" id="rZv-Vb-MTu"/>
                             <constraint firstItem="t7L-Nc-tqh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="u4m-FP-KaP"/>
@@ -94,6 +103,7 @@
                     </view>
                     <connections>
                         <outlet property="currentIcon" destination="Shc-wf-pRi" id="3lo-E3-gly"/>
+                        <outlet property="currentLocation" destination="1ey-Yc-ars" id="Qoo-9q-bac"/>
                         <outlet property="currentTemp" destination="3hH-I0-DWe" id="EyM-Km-IQR"/>
                         <outlet property="currentWeatherText" destination="4FM-34-VaM" id="JaR-Pt-p4S"/>
                     </connections>

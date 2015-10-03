@@ -10,8 +10,6 @@
 
 @interface WeatherConditionsModel : MTLModel <MTLJSONSerializing>
 
-// dunno if need?
-- (NSString *)backgroundColorName;
 - (NSString *)iconName;
 
 @property (nonatomic, strong) NSDate *date;
