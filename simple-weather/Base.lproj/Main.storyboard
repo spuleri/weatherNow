@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="artill_clean_icons.otf">
+            <string>artillcleanweathericons-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--Weather Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="WeatherMainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="t7L-Nc-tqh">
+                                <rect key="frame" x="219" y="102" width="162" height="295"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Shc-wf-pRi">
+                                        <rect key="frame" x="43" y="0.0" width="77" height="108"/>
+                                        <fontDescription key="fontDescription" name="artillcleanweathericons-Regular" family="artill clean weather icons" pointSize="90"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="96" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hH-I0-DWe">
+                                        <rect key="frame" x="0.0" y="108" width="162" height="169"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="190" id="YYI-Uz-lvC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="145"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="YYI-Uz-lvC"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It's hot as hell outside..." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4FM-34-VaM">
+                                        <rect key="frame" x="1" y="277" width="160" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="180" id="wb0-gi-9zd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="wb0-gi-9zd"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.44822189229521026" blue="0.39328612552056585" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="t7L-Nc-tqh" secondAttribute="trailing" constant="210" id="Grj-Nh-kUv"/>
+                            <constraint firstItem="t7L-Nc-tqh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="191" id="MK1-PT-pDd"/>
+                            <constraint firstItem="t7L-Nc-tqh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="37" id="WM0-Wk-hM9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="t7L-Nc-tqh" secondAttribute="trailing" constant="191" id="WNU-iT-sAi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="t7L-Nc-tqh" secondAttribute="trailing" constant="191" id="YaK-ZP-cm5"/>
+                            <constraint firstItem="t7L-Nc-tqh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="82" id="a1F-c9-1et"/>
+                            <constraint firstItem="t7L-Nc-tqh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="191" id="bg7-Ra-DAc"/>
+                            <constraint firstItem="t7L-Nc-tqh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="145" id="cnJ-gx-Bsa"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="t7L-Nc-tqh" secondAttribute="bottom" constant="231" id="g1W-t3-zGS"/>
+                            <constraint firstItem="t7L-Nc-tqh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="172" id="jyU-pJ-Y5f"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="t7L-Nc-tqh" secondAttribute="bottom" constant="339" id="rZv-Vb-MTu"/>
+                            <constraint firstItem="t7L-Nc-tqh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="u4m-FP-KaP"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Grj-Nh-kUv"/>
+                                <exclude reference="MK1-PT-pDd"/>
+                                <exclude reference="WM0-Wk-hM9"/>
+                                <exclude reference="WNU-iT-sAi"/>
+                                <exclude reference="YaK-ZP-cm5"/>
+                                <exclude reference="bg7-Ra-DAc"/>
+                                <exclude reference="cnJ-gx-Bsa"/>
+                                <exclude reference="jyU-pJ-Y5f"/>
+                                <exclude reference="g1W-t3-zGS"/>
+                                <exclude reference="rZv-Vb-MTu"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="currentIcon" destination="Shc-wf-pRi" id="3lo-E3-gly"/>
+                        <outlet property="currentTemp" destination="3hH-I0-DWe" id="EyM-Km-IQR"/>
+                        <outlet property="currentWeatherText" destination="4FM-34-VaM" id="JaR-Pt-p4S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="363"/>
+        </scene>
+    </scenes>
+</document>
