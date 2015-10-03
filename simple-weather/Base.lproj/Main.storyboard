@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cZu-f7-hb5">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -10,10 +10,108 @@
         </mutableArray>
     </customFonts>
     <scenes>
+        <!--Master View Controller-->
+        <scene sceneID="Rcf-qQ-bJ8">
+            <objects>
+                <viewController id="cZu-f7-hb5" customClass="MasterViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jbz-TH-j3x"/>
+                        <viewControllerLayoutGuide type="bottom" id="RHd-2U-qSz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lYJ-Hq-y4h">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dkj-dd-xMl">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Dkj-dd-xMl" firstAttribute="leading" secondItem="lYJ-Hq-y4h" secondAttribute="leadingMargin" constant="-20" id="0p0-c6-tL2"/>
+                            <constraint firstItem="Dkj-dd-xMl" firstAttribute="leading" secondItem="lYJ-Hq-y4h" secondAttribute="leading" id="7tZ-dN-tpQ"/>
+                            <constraint firstItem="Dkj-dd-xMl" firstAttribute="top" secondItem="lYJ-Hq-y4h" secondAttribute="topMargin" id="LBD-BK-yxQ"/>
+                            <constraint firstItem="Dkj-dd-xMl" firstAttribute="top" secondItem="lYJ-Hq-y4h" secondAttribute="top" id="RHs-RV-Ndm"/>
+                            <constraint firstItem="Dkj-dd-xMl" firstAttribute="top" secondItem="lYJ-Hq-y4h" secondAttribute="top" id="TOG-kq-1Jb"/>
+                            <constraint firstItem="Dkj-dd-xMl" firstAttribute="bottom" secondItem="RHd-2U-qSz" secondAttribute="top" id="VEY-QG-UcP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Dkj-dd-xMl" secondAttribute="trailing" constant="-20" id="Wlk-Uu-1Xb"/>
+                            <constraint firstItem="Dkj-dd-xMl" firstAttribute="bottom" secondItem="RHd-2U-qSz" secondAttribute="top" id="a3y-3p-HCo"/>
+                            <constraint firstAttribute="trailing" secondItem="Dkj-dd-xMl" secondAttribute="trailing" id="aKC-2W-lwI"/>
+                            <constraint firstItem="Dkj-dd-xMl" firstAttribute="bottom" secondItem="RHd-2U-qSz" secondAttribute="top" id="eca-on-gnl"/>
+                            <constraint firstAttribute="trailing" secondItem="Dkj-dd-xMl" secondAttribute="trailing" id="fJr-w4-woy"/>
+                            <constraint firstItem="Dkj-dd-xMl" firstAttribute="leading" secondItem="lYJ-Hq-y4h" secondAttribute="leading" id="gcP-IJ-lTS"/>
+                            <constraint firstAttribute="trailing" secondItem="Dkj-dd-xMl" secondAttribute="trailing" id="gfY-FD-7jh"/>
+                            <constraint firstItem="Dkj-dd-xMl" firstAttribute="top" secondItem="lYJ-Hq-y4h" secondAttribute="top" id="r05-WB-LkI"/>
+                            <constraint firstItem="Dkj-dd-xMl" firstAttribute="leading" secondItem="lYJ-Hq-y4h" secondAttribute="leading" id="t3N-Ah-Vks"/>
+                            <constraint firstItem="RHd-2U-qSz" firstAttribute="top" secondItem="Dkj-dd-xMl" secondAttribute="bottom" id="wRr-cP-LQ9"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="0p0-c6-tL2"/>
+                                <exclude reference="7tZ-dN-tpQ"/>
+                                <exclude reference="LBD-BK-yxQ"/>
+                                <exclude reference="RHs-RV-Ndm"/>
+                                <exclude reference="TOG-kq-1Jb"/>
+                                <exclude reference="Wlk-Uu-1Xb"/>
+                                <exclude reference="a3y-3p-HCo"/>
+                                <exclude reference="aKC-2W-lwI"/>
+                                <exclude reference="eca-on-gnl"/>
+                                <exclude reference="gfY-FD-7jh"/>
+                                <exclude reference="t3N-Ah-Vks"/>
+                                <exclude reference="wRr-cP-LQ9"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="Dkj-dd-xMl" id="brK-6s-CMN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eOM-z1-bix" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-399" y="52"/>
+        </scene>
+        <!--Hourly Forecast View Controller-->
+        <scene sceneID="y0H-Oa-FZ9">
+            <objects>
+                <viewController storyboardIdentifier="HourlyWeather" id="hUI-jR-IGv" customClass="HourlyForecastViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TOE-NS-tfn"/>
+                        <viewControllerLayoutGuide type="bottom" id="rto-aR-gnX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zKj-Y9-dzj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hourly" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXf-Pz-6h6">
+                                <rect key="frame" x="275.5" y="289.5" width="50" height="21.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97168462891959251" green="1" blue="0.10169776908799644" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="eXf-Pz-6h6" firstAttribute="top" secondItem="TOE-NS-tfn" secondAttribute="bottom" constant="72" id="Dhy-kL-ctL"/>
+                            <constraint firstItem="eXf-Pz-6h6" firstAttribute="centerY" secondItem="zKj-Y9-dzj" secondAttribute="centerY" id="WZv-BF-ieB"/>
+                            <constraint firstItem="eXf-Pz-6h6" firstAttribute="centerX" secondItem="zKj-Y9-dzj" secondAttribute="centerX" id="cyy-J1-gdx"/>
+                            <constraint firstItem="rto-aR-gnX" firstAttribute="top" secondItem="eXf-Pz-6h6" secondAttribute="bottom" constant="487" id="tm5-fk-MGN"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Dhy-kL-ctL"/>
+                                <exclude reference="tm5-fk-MGN"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zwq-xj-XpU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="597" y="-353"/>
+        </scene>
         <!--Weather Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="WeatherMainViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CurrentWeather" id="BYZ-38-t0r" customClass="WeatherMainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -23,16 +121,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="t7L-Nc-tqh">
-                                <rect key="frame" x="219" y="102" width="162" height="298"/>
+                                <rect key="frame" x="219" y="102" width="161.5" height="297.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Shc-wf-pRi">
-                                        <rect key="frame" x="43" y="0.0" width="77" height="108"/>
+                                        <rect key="frame" x="42" y="0.0" width="76.5" height="108"/>
                                         <fontDescription key="fontDescription" name="artillcleanweathericons-Regular" family="artill clean weather icons" pointSize="90"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="96" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hH-I0-DWe">
-                                        <rect key="frame" x="0.0" y="108" width="162" height="172"/>
+                                        <rect key="frame" x="0.0" y="108" width="161.5" height="171.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="190" id="YYI-Uz-lvC"/>
                                         </constraints>
@@ -46,7 +144,7 @@
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It's hot as hell outside..." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4FM-34-VaM">
-                                        <rect key="frame" x="4" y="280" width="153" height="18"/>
+                                        <rect key="frame" x="4" y="279" width="153" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="180" id="wb0-gi-9zd"/>
                                         </constraints>
@@ -61,8 +159,8 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="location" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ey-Yc-ars">
-                                <rect key="frame" x="279" y="34" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="location" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ey-Yc-ars">
+                                <rect key="frame" x="281.5" y="34" width="37" height="21"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="11"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
