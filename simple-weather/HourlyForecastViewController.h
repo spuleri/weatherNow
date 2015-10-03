@@ -14,7 +14,6 @@
 
 @property (nonatomic, strong) WeatherDataRequester *dataGetter;
 @property (nonatomic, strong) NSMutableArray* hourlyForecast;
-
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end

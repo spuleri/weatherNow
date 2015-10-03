@@ -18,9 +18,8 @@
 }
 
 - (void)getJSONFromURL:(NSURL *)url successBlock:(void(^)(BOOL success, NSDictionary *response))block {
-    NSLog(@"Fetching: %@",url.absoluteString);
     
-
+    NSLog(@"Fetching: %@",url.absoluteString);
     
     [self.manager GET:url.absoluteString parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         // verify response
@@ -34,7 +33,5 @@
     }];
     
 }
-
-
 
 @end

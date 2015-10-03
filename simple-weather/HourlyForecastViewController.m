@@ -30,27 +30,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
-    //@@@@ YAAAAAAAS , NOW THE ONLY ISSUE IS SOME BROKEN ASS CONSTRAINTS
     
-    //self.tableView = [[UITableView alloc] init];
     self.tableView.backgroundColor = [UIColor clearColor];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.separatorColor = [UIColor colorWithWhite:1 alpha:0.2];
-    //self.tableView.pagingEnabled = YES;
-    //[self.view addSubview:self.tableView];
-    // for somereason, without this, it takes the a default height and is all wonky
-    //self.tableView.rowHeight = 100;
     
     self.dataGetter =  [[WeatherDataRequester alloc] init];
     self.hourlyForecast = [NSMutableArray array];
     
     // Adding self as delegate to WeatherManager protocol
     [[WeatherManager sharedInstance] addWeatherManagerDelegate:self];
-    
-
-
 }
 
 - (void) locationManagerDidUpdateLocation:(CLLocation *)location {
@@ -75,29 +65,15 @@
             }
             
             [self.hourlyForecast addObject:hourly];
-            
         }
-        
-        //NSLog(@"%@", self.hourlyForecast);
-        
-        // now need to load tableview!!!!
-        [self initHourlyView];
         [self.tableView reloadData];
-        
-
-        
     };
     
     // Call function to get JSON from a url, and pass in appropiate block for hourly forecast
     [self.dataGetter getJSONFromURL:url successBlock:getHourlyJSONData];
-    
-    
 
 }
 
-- (void)initHourlyView {
-    
-}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -113,11 +89,11 @@
     
     // Configure cell style
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    cell.backgroundColor = [UIColor colorWithWhite:0 alpha:0.2];
+    cell.backgroundColor = [UIColor colorWithWhite:0 alpha:0.05];
     cell.textLabel.textColor = [UIColor whiteColor];
     cell.detailTextLabel.textColor = [UIColor whiteColor];
     
-    
+    // Add data to cell
     cell.icon.text = [hour iconName];
     NSString *timeString = [self.hourFormatter stringFromDate:hour.date];
     NSLog(@"%@", timeString);
@@ -129,9 +105,8 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    // Hourly forecast from openweather map are 2-3 hrs apart.
-    // only want like ~6 so we have a span of 12-18 hours.
-    // TODO: maybe want 7-8 and disabl scroll?
+    // Hourly forecast from openweathermap are 2-3 hrs apart.
+    // only want like ~8 so we have a span of 12-18 hours.
     NSInteger hourCount =  self.hourlyForecast.count;
     NSLog(@"There are this many %lu hours ",  (unsigned long)hourCount);
     return MIN(hourCount, 8);

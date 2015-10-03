@@ -123,6 +123,43 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E157B4E31BC05502001DBCDC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E1CE1AB51BBF7F460089B633 /* MasterViewController.h */,
+				E1CE1AB61BBF7F460089B633 /* MasterViewController.m */,
+				E17CF4171BBDD08A007880BE /* WeatherMainViewController.h */,
+				E17CF4181BBDD08A007880BE /* WeatherMainViewController.m */,
+				E1CE1AB81BBF7FB60089B633 /* HourlyForecastViewController.h */,
+				E1CE1AB91BBF7FB60089B633 /* HourlyForecastViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		E157B4E41BC05518001DBCDC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E17CF41D1BBDD8EE007880BE /* WeatherConditionsModel.h */,
+				E17CF41E1BBDD8EE007880BE /* WeatherConditionsModel.m */,
+				E157B4DD1BBF900A001DBCDC /* WeatherHourlyForecastModel.h */,
+				E157B4DE1BBF900A001DBCDC /* WeatherHourlyForecastModel.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		E157B4E51BC055C2001DBCDC /* HelperClasses */ = {
+			isa = PBXGroup;
+			children = (
+				E17CF41A1BBDD8BA007880BE /* WeatherDataRequester.h */,
+				E17CF41B1BBDD8BA007880BE /* WeatherDataRequester.m */,
+				E17CF4201BBE021E007880BE /* WeatherManager.h */,
+				E17CF4211BBE021E007880BE /* WeatherManager.m */,
+				E157B4E01BBFAD83001DBCDC /* HourForecastCell.h */,
+				E157B4E11BBFAD83001DBCDC /* HourForecastCell.m */,
+			);
+			name = HelperClasses;
+			sourceTree = "<group>";
+		};
 		E17150651BBCB06800F9CB13 = {
 			isa = PBXGroup;
 			children = (
@@ -148,30 +185,17 @@
 		E17150701BBCB06800F9CB13 /* simple-weather */ = {
 			isa = PBXGroup;
 			children = (
-				E17CF4141BBDCEE2007880BE /* Resources */,
 				E17150741BBCB06800F9CB13 /* AppDelegate.h */,
 				E17150751BBCB06800F9CB13 /* AppDelegate.m */,
-				E171507A1BBCB06800F9CB13 /* Main.storyboard */,
+				E17CF4141BBDCEE2007880BE /* Resources */,
+				E157B4E41BC05518001DBCDC /* Models */,
+				E157B4E31BC05502001DBCDC /* Controllers */,
+				E157B4E51BC055C2001DBCDC /* HelperClasses */,
 				E171507D1BBCB06800F9CB13 /* Assets.xcassets */,
+				E171507A1BBCB06800F9CB13 /* Main.storyboard */,
 				E171507F1BBCB06800F9CB13 /* LaunchScreen.storyboard */,
 				E17150821BBCB06800F9CB13 /* Info.plist */,
 				E17150711BBCB06800F9CB13 /* Supporting Files */,
-				E17CF4171BBDD08A007880BE /* WeatherMainViewController.h */,
-				E17CF4181BBDD08A007880BE /* WeatherMainViewController.m */,
-				E17CF41A1BBDD8BA007880BE /* WeatherDataRequester.h */,
-				E17CF41B1BBDD8BA007880BE /* WeatherDataRequester.m */,
-				E17CF41D1BBDD8EE007880BE /* WeatherConditionsModel.h */,
-				E17CF41E1BBDD8EE007880BE /* WeatherConditionsModel.m */,
-				E17CF4201BBE021E007880BE /* WeatherManager.h */,
-				E17CF4211BBE021E007880BE /* WeatherManager.m */,
-				E1CE1AB51BBF7F460089B633 /* MasterViewController.h */,
-				E1CE1AB61BBF7F460089B633 /* MasterViewController.m */,
-				E1CE1AB81BBF7FB60089B633 /* HourlyForecastViewController.h */,
-				E1CE1AB91BBF7FB60089B633 /* HourlyForecastViewController.m */,
-				E157B4DD1BBF900A001DBCDC /* WeatherHourlyForecastModel.h */,
-				E157B4DE1BBF900A001DBCDC /* WeatherHourlyForecastModel.m */,
-				E157B4E01BBFAD83001DBCDC /* HourForecastCell.h */,
-				E157B4E11BBFAD83001DBCDC /* HourForecastCell.m */,
 			);
 			path = "simple-weather";
 			sourceTree = "<group>";

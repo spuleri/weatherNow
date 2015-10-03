@@ -23,11 +23,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-
     self.dataGetter =  [[WeatherDataRequester alloc] init];
     self.currentConditions = nil;
-
     
+    // Default bg color
     self.currentBackgroundColor = [WeatherMainViewController colorDictionary][@"coolOrange"];
     self.view.backgroundColor = self.currentBackgroundColor;
     
@@ -102,11 +101,9 @@
         [self setBackgroundColor];
         [self setTemperature];
         [self setConditionText];
-                
-        
         
     } else {
-        //TODO bad stuffs
+        //TODO: bad stuffs
     }
     
 }

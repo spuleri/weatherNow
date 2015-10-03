@@ -15,7 +15,6 @@
 @property (nonatomic, strong, readwrite) WeatherConditionsModel *currentCondition;
 @property (nonatomic, strong, readwrite) CLLocation *currentLocation;
 @property (nonatomic, strong, readwrite) NSArray *hourlyForecast;
-@property (nonatomic, strong, readwrite) NSArray *dailyForecast;
 
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (strong, nonatomic) NSMutableArray *observers;
@@ -81,8 +80,7 @@
                 [observer locationManagerDidUpdateLocation:[locations lastObject]];
             }
         }
-        // Grab current weather data with curent location
-        //[self updateCurrentConditions];
+
     }
 }
 

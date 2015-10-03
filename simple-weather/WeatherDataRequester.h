@@ -14,9 +14,7 @@
 
 @interface WeatherDataRequester : NSObject
 
-//- (WeatherConditionsModel *)getCurrentConditionsForLocation:(CLLocationCoordinate2D)coordinate;
 - (void)getJSONFromURL:(NSURL *)url successBlock:(void(^)(BOOL success, NSDictionary *response))block;
-
 @property (nonatomic, strong) AFHTTPRequestOperationManager *manager;
 
 @end

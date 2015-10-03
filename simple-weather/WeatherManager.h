@@ -7,6 +7,9 @@
 //
 // A singleton class that gets the device's location and gets the current weather!
 
+
+// TODO: Refactor to hold Weather Data as well as location instead of holding weather data in View Controller
+
 @import Foundation;
 @import CoreLocation;
 #import "WeatherConditionsModel.h"
