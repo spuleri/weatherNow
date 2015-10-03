@@ -170,8 +170,10 @@
 }
 -(void)setConditionText{
     NSNumber *temp = self.currentConditions.temperature;
+    NSString *conditionDescription = self.currentConditions.conditionDescription;
     NSMutableString *conditionText = [NSMutableString new];
     
+    // Add temperature text
     if(temp.floatValue > 95.0) {
         [conditionText appendString:@"it's really hot out, prepare to melt."];
     }
@@ -208,6 +210,23 @@
         [conditionText appendString:@"its in the negatives. this dev is from florida... i hope you survive."];
     }
     
+    // Add practical advice
+    if ([conditionDescription containsString:@"rain"]) {
+        [conditionText appendString:@"also, you probably wanna bring an umbrella."];
+    }
+    else if ([conditionDescription containsString:@"snow"]) {
+        [conditionText appendString:@"and its snowing. bring a snow umbrella."];
+    }
+    else if ([conditionDescription containsString:@"thunderstorm"]) {
+        [conditionText appendString:@"and eep! a thunderstorm. bring an umbrella and watchout!1!."];
+    }
+    else if ([conditionDescription containsString:@"drizzle"]) {
+        [conditionText appendString:@"and it's drizzlin. bring an umbrella. or not if you're brave."];
+    }
+    else if ([conditionDescription containsString:@"reeze"]) {
+        [conditionText appendString:@"and it's breeeeeezy yo."];
+    }
+
     self.currentWeatherText.text = conditionText;
 
 }
