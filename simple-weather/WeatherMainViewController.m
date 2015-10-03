@@ -102,9 +102,7 @@
         [self setBackgroundColor];
         [self setTemperature];
         [self setConditionText];
-        
-        //TODO need to set text too
-        
+                
         
         
     } else {
@@ -158,7 +156,8 @@
         self.currentBackgroundColor = [WeatherMainViewController colorDictionary][@"purple"];
     }
     
-    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"BGColorChanged" object:nil];
+
     self.view.backgroundColor = self.currentBackgroundColor;
 
 }
@@ -210,7 +209,7 @@
     else if (temp.floatValue < 0) {
         [conditionText appendString:@"its in the negatives. this dev is from florida... i hope you survive."];
     }
-    
+    [conditionText appendString:@"\n"];
     // Add practical advice
     if ([conditionDescription containsString:@"rain"]) {
         [conditionText appendString:@"also, you probably wanna bring an umbrella."];

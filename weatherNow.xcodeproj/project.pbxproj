@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		65A6A1F895D5C8D85989B1C0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D41E33A68CD430672602F586 /* libPods.a */; };
+		E157B4DF1BBF900A001DBCDC /* WeatherHourlyForecastModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E157B4DE1BBF900A001DBCDC /* WeatherHourlyForecastModel.m */; settings = {ASSET_TAGS = (); }; };
+		E157B4E21BBFAD83001DBCDC /* HourForecastCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E157B4E11BBFAD83001DBCDC /* HourForecastCell.m */; settings = {ASSET_TAGS = (); }; };
 		E17150731BBCB06800F9CB13 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E17150721BBCB06800F9CB13 /* main.m */; };
 		E17150761BBCB06800F9CB13 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E17150751BBCB06800F9CB13 /* AppDelegate.m */; };
 		E171507C1BBCB06800F9CB13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E171507A1BBCB06800F9CB13 /* Main.storyboard */; };
@@ -45,6 +47,10 @@
 		41A173349A233302943038F4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		5E90F3F7B583140BB742B6E0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D41E33A68CD430672602F586 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E157B4DD1BBF900A001DBCDC /* WeatherHourlyForecastModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherHourlyForecastModel.h; sourceTree = "<group>"; };
+		E157B4DE1BBF900A001DBCDC /* WeatherHourlyForecastModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherHourlyForecastModel.m; sourceTree = "<group>"; };
+		E157B4E01BBFAD83001DBCDC /* HourForecastCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HourForecastCell.h; sourceTree = "<group>"; };
+		E157B4E11BBFAD83001DBCDC /* HourForecastCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HourForecastCell.m; sourceTree = "<group>"; };
 		E171506E1BBCB06800F9CB13 /* weatherNow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weatherNow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E17150721BBCB06800F9CB13 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E17150741BBCB06800F9CB13 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -162,6 +168,10 @@
 				E1CE1AB61BBF7F460089B633 /* MasterViewController.m */,
 				E1CE1AB81BBF7FB60089B633 /* HourlyForecastViewController.h */,
 				E1CE1AB91BBF7FB60089B633 /* HourlyForecastViewController.m */,
+				E157B4DD1BBF900A001DBCDC /* WeatherHourlyForecastModel.h */,
+				E157B4DE1BBF900A001DBCDC /* WeatherHourlyForecastModel.m */,
+				E157B4E01BBFAD83001DBCDC /* HourForecastCell.h */,
+				E157B4E11BBFAD83001DBCDC /* HourForecastCell.m */,
 			);
 			path = "simple-weather";
 			sourceTree = "<group>";
@@ -372,10 +382,12 @@
 				E17CF41C1BBDD8BA007880BE /* WeatherDataRequester.m in Sources */,
 				E17150761BBCB06800F9CB13 /* AppDelegate.m in Sources */,
 				E1CE1ABA1BBF7FB60089B633 /* HourlyForecastViewController.m in Sources */,
+				E157B4DF1BBF900A001DBCDC /* WeatherHourlyForecastModel.m in Sources */,
 				E17CF4221BBE021E007880BE /* WeatherManager.m in Sources */,
 				E17150731BBCB06800F9CB13 /* main.m in Sources */,
 				E17CF41F1BBDD8EE007880BE /* WeatherConditionsModel.m in Sources */,
 				E17CF4191BBDD08A007880BE /* WeatherMainViewController.m in Sources */,
+				E157B4E21BBFAD83001DBCDC /* HourForecastCell.m in Sources */,
 				E1CE1AB71BBF7F460089B633 /* MasterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WeatherDataRequester.h"
+#import "WeatherManager.h"
 
-@interface HourlyForecastViewController : UIViewController
+@interface HourlyForecastViewController : UIViewController <WeatherManagerDelegate, UITableViewDataSource, UITableViewDelegate, UITextViewDelegate>
+
+@property (nonatomic, strong) WeatherDataRequester *dataGetter;
+@property (nonatomic, strong) NSMutableArray* hourlyForecast;
+
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end
