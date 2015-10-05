@@ -68,6 +68,8 @@
         return;
     }
     
+    NSLog(@"got new location");
+    
     CLLocation *location = [locations lastObject];
     
     if (location.horizontalAccuracy > 0) {

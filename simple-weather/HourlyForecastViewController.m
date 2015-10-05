@@ -96,7 +96,7 @@
     // Add data to cell
     cell.icon.text = [hour iconName];
     NSString *timeString = [self.hourFormatter stringFromDate:hour.date];
-    NSLog(@"%@", timeString);
+    //NSLog(@"%@", timeString);
     cell.time.text = timeString;
     cell.temperature.text = [NSString stringWithFormat:@"%ld", hour.temperature.integerValue];
     
@@ -108,7 +108,6 @@
     // Hourly forecast from openweathermap are 2-3 hrs apart.
     // only want like ~8 so we have a span of 12-18 hours.
     NSInteger hourCount =  self.hourlyForecast.count;
-    NSLog(@"There are this many %lu hours ",  (unsigned long)hourCount);
     return MIN(hourCount, 8);
 }
 

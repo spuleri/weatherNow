@@ -9,6 +9,7 @@
 #import "MasterViewController.h"
 #import "WeatherMainViewController.h"
 #import "HourlyForecastViewController.h"
+#import "WeatherManager.h"
 
 
 @interface MasterViewController ()
@@ -76,10 +77,6 @@
     
 }
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    NSLog(@"@@@@@@@I SCROLLLLLED");
-    
-}
 
 
 -(void)refreshView: (UIRefreshControl *) refresh{
@@ -89,7 +86,10 @@
     //execute the code after .5 seconds
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
         
-        [self.view setNeedsDisplay];
+        // To 'refresh', tell WeatherManager to start getting current location
+       // which will then alert the 2 observers (views) whom will then update their view.
+        [[WeatherManager sharedInstance] getCurrentLocation];
+        
         //once all the data has been fetched
         //calling the endRefreshing Method of UIRefreshControl
         [refresh endRefreshing];
