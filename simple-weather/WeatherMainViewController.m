@@ -163,7 +163,7 @@
     self.currentIcon.text = [self.currentConditions iconName];
 }
 -(void)setTemperature {
-    self.currentTemp.text = [NSString stringWithFormat:@"%ld", self.currentConditions.temperature.integerValue];
+    self.currentTemp.text = [NSString stringWithFormat:@"%ld", (long)self.currentConditions.temperature.integerValue];
 }
 -(void)setConditionText{
     NSNumber *temp = self.currentConditions.temperature;

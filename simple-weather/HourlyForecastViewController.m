@@ -98,7 +98,7 @@
     NSString *timeString = [self.hourFormatter stringFromDate:hour.date];
     //NSLog(@"%@", timeString);
     cell.time.text = timeString;
-    cell.temperature.text = [NSString stringWithFormat:@"%ld", hour.temperature.integerValue];
+    cell.temperature.text = [NSString stringWithFormat:@"%ld", (long)hour.temperature.integerValue];
     
     
     return cell;
